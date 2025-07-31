@@ -20,24 +20,17 @@ export default function App() {
   return (
 
     <SafeAreaView style={styles.container}>
-      <Text>Hello!!</Text>
-      <Button title={'To click'} color="red" onPress={handleButtonPress1} />
-      <Button title={'To'} color="red" onPress={handleButtonPress2} />
+      <Text style={[simpleStyle, styles.container]}>Hello!!</Text>
 
-      <TouchableWithoutFeedback onPress={handlePressBtn}>
-
-        <Image blurRadius={15} source={{
-          width: 200,
-          height: 150,
-          uri: "https://24gadget.ru/uploads/posts/2014-04/thumbs/1397458936_ios-8.jpg"
-
-        }} />
-
-      </TouchableWithoutFeedback>
 
       <StatusBar style="auto" />
     </SafeAreaView>
   );
+}
+
+const simpleStyle = {
+  backgroundColor: 'red',
+  color: 'blue'
 }
 
 const styles = StyleSheet.create({
